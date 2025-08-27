@@ -6,20 +6,17 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "FAQ", href: "#faq" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Portfolio", href: "/portfolio" },
+    { name: "FAQ", href: "/faq" },
+    { name: "Contact", href: "/contact" },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const navigateToPage = (href: string) => {
+    window.location.href = href;
     setIsMenuOpen(false);
   };
 
@@ -32,7 +29,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/8e3da550-115b-40ff-8065-79cdc6e0db9f.png" 
               alt="IXONITE Logo" 
-              className="h-10 w-auto"
+              className="h-12 w-auto"
             />
           </div>
 
@@ -41,7 +38,7 @@ const Header = () => {
             {navItems.map((item) => (
               <button
                 key={item.name}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => navigateToPage(item.href)}
                 className="text-foreground hover:text-primary transition-colors duration-300 relative group"
               >
                 {item.name}
@@ -54,7 +51,7 @@ const Header = () => {
           <div className="hidden md:flex">
             <Button 
               variant="default" 
-              onClick={() => scrollToSection("#contact")}
+              onClick={() => navigateToPage("/contact")}
               className="font-semibold"
             >
               Get Started
@@ -80,18 +77,18 @@ const Header = () => {
           <div className="md:hidden py-4 border-t border-border/40">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => scrollToSection(item.href)}
-                  className="text-left text-foreground hover:text-primary transition-colors duration-300 py-2"
+                  <button
+                    key={item.name}
+                    onClick={() => navigateToPage(item.href)}
+                    className="text-left text-foreground hover:text-primary transition-colors duration-300 py-2"
                 >
                   {item.name}
                 </button>
               ))}
-              <Button 
-                variant="default" 
-                onClick={() => scrollToSection("#contact")}
-                className="w-full mt-4"
+                <Button 
+                  variant="default" 
+                  onClick={() => navigateToPage("/contact")}
+                  className="w-full mt-4"
               >
                 Get Started
               </Button>

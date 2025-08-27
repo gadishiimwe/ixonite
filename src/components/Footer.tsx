@@ -1,17 +1,14 @@
 const Footer = () => {
   const quickLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Portfolio", href: "/portfolio" },
+    { name: "Contact", href: "/contact" },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const navigateToPage = (href: string) => {
+    window.location.href = href;
   };
 
   return (
@@ -20,9 +17,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Logo and Tagline */}
           <div>
-            <h3 className="text-2xl font-bold mb-3">
-              IXO<span className="text-primary">NITE</span>
-            </h3>
+            <div className="mb-3">
+              <img 
+                src="/lovable-uploads/8e3da550-115b-40ff-8065-79cdc6e0db9f.png" 
+                alt="IXONITE Logo" 
+                className="h-10 w-auto mb-2"
+              />
+            </div>
             <p className="text-background/80 text-sm leading-relaxed">
               Affordable Digital Solutions for Every Business
             </p>
@@ -35,7 +36,7 @@ const Footer = () => {
               {quickLinks.map((link) => (
                 <button
                   key={link.name}
-                  onClick={() => scrollToSection(link.href)}
+                  onClick={() => navigateToPage(link.href)}
                   className="text-background/70 hover:text-primary transition-colors duration-300 text-left text-sm"
                 >
                   {link.name}
