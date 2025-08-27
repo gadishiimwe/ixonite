@@ -49,8 +49,8 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4 text-background">Get In Touch</h4>
             <div className="space-y-2 mb-4">
               <p className="text-background/80 text-sm">📍 Kigali, Rwanda</p>
-              <p className="text-background/80 text-sm">📧 info@ixonite.com</p>
-              <p className="text-background/80 text-sm">📱 +250 (xxx xxx xxx)</p>
+              <p className="text-background/80 text-sm">📧 moreaboutus@gmail.com</p>
+              <p className="text-background/80 text-sm">📱 +250 788 548 084</p>
             </div>
             
             <div className="flex space-x-4">

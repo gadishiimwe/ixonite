@@ -29,9 +29,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-foreground">
-              IXO<span className="text-primary">NITE</span>
-            </h1>
+            <img 
+              src="/lovable-uploads/8e3da550-115b-40ff-8065-79cdc6e0db9f.png" 
+              alt="IXONITE Logo" 
+              className="h-10 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
