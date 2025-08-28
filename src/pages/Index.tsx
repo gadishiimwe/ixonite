@@ -4,6 +4,9 @@ import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import PricingSection from "@/components/PricingSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
+import StatsSection from "@/components/StatsSection";
+import ProcessSection from "@/components/ProcessSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
@@ -25,11 +28,17 @@ const Index = () => {
       <section id="pricing">
         <PricingSection />
       </section>
-      <section id="portfolio">
+      <section id="why-choose">
         <WhyChooseSection />
       </section>
-      <section id="faq">
-        {/* FAQ section placeholder */}
+      <section id="stats">
+        <StatsSection />
+      </section>
+      <section id="process">
+        <ProcessSection />
+      </section>
+      <section id="testimonials">
+        <TestimonialsSection />
       </section>
       <section id="contact">
         <ContactSection />
