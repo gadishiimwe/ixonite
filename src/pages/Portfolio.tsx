@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Portfolio = () => {
   const projects = [
@@ -142,9 +143,11 @@ const Portfolio = () => {
                         </span>
                       )}
                     </div>
-                    <Button variant="outline" className="w-full">
-                      View Case Study
-                    </Button>
+                    <Link to="/contact">
+                      <Button variant="outline" className="w-full">
+                        Contact Us
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               ))}
@@ -256,12 +259,16 @@ const Portfolio = () => {
                   Every project starts with understanding your unique needs and goals.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button variant="hero" size="lg">
-                    Start Your Project Today
-                  </Button>
-                  <Button variant="hero-outline" size="lg">
-                    View More Case Studies
-                  </Button>
+                  <Link to="/contact">
+                    <Button variant="hero" size="lg">
+                      Start Your Project Today
+                    </Button>
+                  </Link>
+                  <Link to="/services">
+                    <Button variant="hero-outline" size="lg">
+                      View Our Services
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>

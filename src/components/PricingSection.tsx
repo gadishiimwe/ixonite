@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const PricingSection = () => {
   const pricingPlans = [
@@ -120,13 +121,15 @@ const PricingSection = () => {
                 ))}
               </ul>
               
-              <Button 
-                variant={plan.highlight ? "hero" : "hero-outline"}
-                size="lg"
-                className="w-full"
-              >
-                Get Started
-              </Button>
+              <Link to="/contact">
+                <Button 
+                  variant={plan.highlight ? "hero" : "hero-outline"}
+                  size="lg"
+                  className="w-full"
+                >
+                  Get Started
+                </Button>
+              </Link>
             </div>
           ))}
         </div>

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import heroLaptop from "@/assets/hero-laptop-mockup.jpg";
+import { Link } from "react-router-dom";
+import heroWebPreview from "@/assets/hero-web-preview.png";
 import heroPattern from "@/assets/hero-pattern.jpg";
 
 const HeroSection = () => {
@@ -31,48 +32,52 @@ const HeroSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button 
-                variant="hero" 
-                size="xl"
-                className="group"
-              >
-                Get Started
-                <svg 
-                  className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
+              <Link to="/contact">
+                <Button 
+                  variant="hero" 
+                  size="xl"
+                  className="group"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Button>
+                  Get Started
+                  <svg 
+                    className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Button>
+              </Link>
               
-              <Button 
-                variant="hero-outline" 
-                size="xl"
-                className="group"
-              >
-                View Our Work
-                <svg 
-                  className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
+              <Link to="/portfolio">
+                <Button 
+                  variant="hero-outline" 
+                  size="xl"
+                  className="group"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                </svg>
-              </Button>
+                  View Our Work
+                  <svg 
+                    className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                </Button>
+              </Link>
             </div>
           </div>
           
-          {/* Right Content - Laptop Mockup */}
+          {/* Right Content - Web Preview */}
           <div className="flex justify-center lg:justify-end animate-slide-in-right">
             <div className="relative animate-float">
               <img 
-                src={heroLaptop} 
-                alt="Modern laptop displaying IXONITE website design"
-                className="w-full max-w-lg h-auto drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+                src={heroWebPreview} 
+                alt="Modern website preview showcasing IXONITE's professional web design and development expertise"
+                className="w-full max-w-2xl h-auto drop-shadow-2xl hover:scale-105 transition-transform duration-500"
               />
               
               {/* Floating elements */}
