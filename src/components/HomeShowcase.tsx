@@ -1,3 +1,5 @@
+import QrImage from "./QrImage";
+
 const HomeShowcase = () => {
   return (
     <section className="py-20 bg-gradient-to-b from-background to-primary/5 overflow-hidden">
@@ -12,20 +14,47 @@ const HomeShowcase = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <div className="relative rounded-2xl bg-white border border-border overflow-hidden group hover:shadow-card-hover transition-all duration-500">
-            <img src="/lovable-uploads/web prev.png" alt="Website preview" className="w-full h-full object-contain translate-y-2 group-hover:scale-[1.03] group-hover:-translate-y-0 transition-transform duration-500" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-          </div>
-          <div className="relative rounded-2xl bg-white border border-border overflow-hidden group hover:shadow-card-hover transition-all duration-500">
-            <img src="/lovable-uploads/mobile.png" alt="Mobile app preview" className="w-full h-full object-contain translate-y-2 group-hover:scale-[1.03] group-hover:-translate-y-0 transition-transform duration-500" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-          </div>
-          <div className="relative rounded-2xl border border-primary/20 bg-primary/5 overflow-hidden p-6 flex items-center justify-center group">
-            <div className="text-center">
-              <img src="lovable-uploads/qrCode.png" onError={(e)=>{ (e.target as HTMLImageElement).src = "/lovable-uploads/qr-code.png"; }} alt="Scan to chat" className="mx-auto h-28 w-28 object-contain border border-primary/30 rounded-md bg-white group-hover:scale-105 transition-transform" />
-              <div className="mt-4 text-sm text-body">Scan to chat with us instantly</div>
+          <div className="relative rounded-2xl bg-gradient-to-br from-white to-gray-50 border-2 border-primary/10 overflow-hidden group hover:shadow-2xl hover:border-primary/30 transition-all duration-500">
+            <div className="p-4">
+              <img 
+                src="/lovable-uploads/web prev.png" 
+                alt="Professional website development showcasing our web design expertise" 
+                className="w-full h-auto object-contain rounded-lg translate-y-2 group-hover:scale-[1.02] group-hover:-translate-y-0 transition-transform duration-500 shadow-lg" 
+              />
             </div>
-            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-primary/20 rounded-full blur-2xl" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm p-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <p className="text-sm font-semibold text-foreground">Website Development</p>
+              <p className="text-xs text-body">Custom, responsive websites</p>
+            </div>
+          </div>
+          
+          <div className="relative rounded-2xl bg-gradient-to-br from-white to-gray-50 border-2 border-primary/10 overflow-hidden group hover:shadow-2xl hover:border-primary/30 transition-all duration-500">
+            <div className="p-4 flex items-center justify-center h-full">
+              <img 
+                src="/lovable-uploads/mobile.png" 
+                alt="Mobile app development preview showcasing our mobile expertise" 
+                className="w-auto h-[400px] object-contain translate-y-2 group-hover:scale-[1.02] group-hover:-translate-y-0 transition-transform duration-500 drop-shadow-2xl" 
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm p-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <p className="text-sm font-semibold text-foreground">Mobile Apps</p>
+              <p className="text-xs text-body">iOS & Android solutions</p>
+            </div>
+          </div>
+          
+          <div className="relative rounded-2xl border-2 border-primary/30 bg-gradient-to-br from-primary/10 via-primary/5 to-background overflow-hidden p-8 flex items-center justify-center group hover:shadow-2xl hover:border-primary/50 transition-all duration-500">
+            <div className="text-center relative z-10">
+              <div className="mb-4 inline-block p-4 bg-white rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-500">
+                <QrImage size={120} className="border-2 border-primary/40 rounded-lg" alt="Scan QR code to contact us on WhatsApp" />
+              </div>
+              <h3 className="text-lg font-bold text-foreground mb-2">Quick Connect</h3>
+              <p className="text-sm text-body mb-1">Scan to chat with us</p>
+              <p className="text-xs text-primary font-semibold">on WhatsApp instantly!</p>
+            </div>
+            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-primary/30 rounded-full blur-3xl animate-pulse" />
+            <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
           </div>
         </div>
       </div>

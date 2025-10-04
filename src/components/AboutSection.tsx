@@ -33,21 +33,34 @@ const AboutSection = () => {
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            About{" "}
-            <span className="text-primary relative">
-              IXONITE
-              <div className="absolute -bottom-2 left-0 w-full h-1 bg-primary rounded-full"></div>
-            </span>
-          </h2>
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          <div className="order-2 lg:order-1">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
+              <img 
+                src="/lovable-uploads/aboutuus.jpg" 
+                alt="K2 Digital team partnership and collaboration in digital solutions" 
+                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </div>
+          </div>
           
-          <div className="max-w-4xl mx-auto">
-            <p className="text-xl text-body leading-relaxed">
-              IXONITE is a digital agency helping businesses in Rwanda and beyond embrace technology. 
-              We believe going digital shouldn't be expensive, so we offer affordable solutions with 
-              world-class quality.
-            </p>
+          <div className="order-1 lg:order-2">
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+              About{" "}
+              <span className="text-primary relative">
+                IXONITE
+                <div className="absolute -bottom-2 left-0 w-full h-1 bg-primary rounded-full"></div>
+              </span>
+            </h2>
+            
+            <div className="space-y-4">
+              <p className="text-xl text-body leading-relaxed">
+                IXONITE is a digital agency helping businesses in Rwanda and beyond embrace technology. 
+                We believe going digital shouldn't be expensive, so we offer affordable solutions with 
+                world-class quality.
+              </p>
+            </div>
           </div>
         </div>
         

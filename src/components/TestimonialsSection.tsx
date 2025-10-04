@@ -21,8 +21,15 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-secondary/20">
-      <div className="container mx-auto px-6">
+    <section className="py-20 bg-secondary/20 relative overflow-hidden">
+      <div className="absolute inset-0 opacity-[0.03]">
+        <img 
+          src="/lovable-uploads/reviews-bg.jpg" 
+          alt="Customer reviews background" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             What Our <span className="text-primary">Clients Say</span>
